@@ -21,10 +21,10 @@ Lycka till!
 
    .
    
-   ├── användarnamn                # ditt github username
-   │   ├── programmeringsspråk
-   │      ├── källkod              # import com.apache...
-   │      ├── README.md 
+    ├── användarnamn                # ditt github username
+   │   ├ ── programmeringsspråk
+   │      ├ ── källkod              # import com.apache...
+   │      ├ ── README.md 
    │             10 = ??
    │             50 = ??
    │             1000 = ??
