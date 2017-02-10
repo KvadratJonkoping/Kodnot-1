@@ -21,7 +21,7 @@ func getFigures(number int) []string {
 func kvadrat(antalTal int) int {
 	f := fibonacci()
 	totalSum := 0
-	for i := 0; i < 50; i++ {
+	for i := 0; i < antalTal; i++ {
 		sum := 0
 		for _, figure := range getFigures(f()) {
 			i, _ := strconv.Atoi(figure)
