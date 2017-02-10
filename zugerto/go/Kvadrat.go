@@ -28,13 +28,12 @@ func kvadrat(antalTal int) int {
 			sum += i
 		}
 		totalSum += sum % 10
-
 	}
 	return totalSum % 10
 }
 
 func main() {
-	fmt.Println("Result med 10 tal i fibonacci-serien: ", kvadrat(10))
-	fmt.Println("Result med 50 tal i fibonacci-serien: ", kvadrat(50))
-	fmt.Println("Result med 1000 tal i fibonacci-serien: ", kvadrat(1000))
+	fmt.Println("Resultat med 10 tal i fibonacci-serien: ", kvadrat(10))
+	fmt.Println("Resultat med 50 tal i fibonacci-serien: ", kvadrat(50))
+	fmt.Println("Resultat med 1000 tal i fibonacci-serien: ", kvadrat(1000))
 }
