@@ -1,11 +1,11 @@
 
-Hej och välkomna till Kvadrats första Kodnöt! 
+#Hej och välkomna till Kvadrats första Kodnöt! 
 
 Är du bland de 10 första som svarar in med ett korrekt svar har du chansen att vinna en lunch och en trislott. Vill du inkassera vinsten skriv din mail i readme filen. 
 
 Lycka till! 
 
-Följ stegen nedan. 
+#Följ stegen nedan. 
 
 1. Implementera en funktion som kan räkna fram en sekvens av fibonaccinummer. 1+1=2 -> 1+2=3 -> 2+3=5 etc etc. 
 
