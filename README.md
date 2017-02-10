@@ -19,15 +19,15 @@ Lycka till!
 
 6. I denna mappa ska din källkod finnas och en README.md finnas som innehåller resultat från de 10, 50 och 1000 första fibonaccital, där fibonaccital större än 1 ingår i serien.
 
-    .
-    
-    ├── användarnamn                # ditt github username
-    │   ├── programmeringsspråk
-    │      ├── källkod              # import com.apache...
-    │      ├── README.md 
-    │             10 = ??
-    │             50 = ??
-    │             1000 = ??
-    └── ...
+   .
+   
+   ├── användarnamn                # ditt github username
+   │   ├── programmeringsspråk
+   │      ├── källkod              # import com.apache...
+   │      ├── README.md 
+   │             10 = ??
+   │             50 = ??
+   │             1000 = ??
+   └── ...
 
 
