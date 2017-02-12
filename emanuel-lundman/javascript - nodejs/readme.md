@@ -2,13 +2,17 @@
 
 Testade att bygga med javascript och exekvera med node.
 
+_för att exekvera:_<br/>
+`npm i`<br/>
+`node index.js`
 
-| Nummer   | Lösning   |
+
+
+| Lösningar   |    |
 | ---   | ---   |
 | 10   | 8 |
 | 50   | 7 |
-| 1000 | 4 |
+| 1000 | 9 |
 
 
-Mvh<br/>
-Emanuel Lundman
+/Emanuel Lundman
