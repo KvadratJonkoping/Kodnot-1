@@ -2,26 +2,27 @@ package main
 
 import (
 	"fmt"
+	"math/big"
 	"strconv"
 	"strings"
 )
 
-func fibonacci() func() int {
-	a, b := 1, 2
-	return func() int {
-		a, b = b, a+b
+func fibonacci() func() *big.Int {
+	a, b := big.NewInt(1), big.NewInt(2)
+	return func() *big.Int {
+		a, b = b, a.Add(a, b)
 		return a
 	}
 }
 
-func getFigures(number int) []string {
-	return strings.Split(strconv.Itoa(number), "")
+func getFigures(number *big.Int) []string {
+	return strings.Split(number.String(), "")
 }
 
-func kvadrat(antalTal int) int {
+func kvadrat(numberOfNumbers int) int {
 	f := fibonacci()
 	totalSum := 0
-	for i := 0; i < antalTal; i++ {
+	for i := 0; i < numberOfNumbers; i++ {
 		sum := 0
 		for _, figure := range getFigures(f()) {
 			i, _ := strconv.Atoi(figure)
