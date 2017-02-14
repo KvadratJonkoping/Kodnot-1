@@ -40,9 +40,8 @@ let codeNutSolution = (depths, startFibonacciAt = 1) => {
         return process.hrtime(start)[0] + " s " + elapsed.toFixed(0) + " ms";
     }
 
-    let calculate = (result, depths, index, maxDepth) => {
+    while (index <= maxDepth){
         progressBar.tick();
-        if(index >= maxDepth) return result;
         index += 1;
 
         // Calculate current fibonacci
@@ -68,28 +67,31 @@ let codeNutSolution = (depths, startFibonacciAt = 1) => {
         // Set fibonacci values for next iteration
         result.previous.shift();
         result.previous.push(fibonacci);
+    }
 
-        return calculate(result, depths, index, maxDepth);
-    };
-
-    // Calculate solution and return
-    return calculate(result, depths, index, maxDepth);
-
+    return result;
 }
 
 // Values to find solution for
-const solveFor = [10, 50, 1000, 2000, 4000, 6000, 8000, 10000];
+const solveFor = [10, 50, 1000, 2000, 4000, 6000, 8000, 10000, 15000, 20000, 25000, 30000, 35000, 40000];
 
 // Calculate solution
 const solution = codeNutSolution(solveFor);
 
 // Output result
 let table = new Table({
-    head: [chalk.white("Solutions..."), "", chalk.white("time spent")],
+    head: [
+        chalk.white("Solutions..."), 
+        "", 
+        chalk.white("time spent")
+    ],
     style: { "padding-left": 1, "padding-right": 1 }
 })
-
-table.push(...solveFor.map(num => [chalk.white(num), chalk.yellow(solution.results[num].value), chalk.white(solution.results[num].time)]));
-process.hrtime.hrtime
+table.push(...solveFor.map(num => [
+    chalk.white(num), 
+    chalk.yellow(solution.results[num].value), 
+    chalk.white(solution.results[num].time)
+    ]
+));
 console.log(table.toString(), "\n");
 
