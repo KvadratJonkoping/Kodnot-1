@@ -3,25 +3,26 @@
   (:gen-class))
 
 (defn fib 
-         ([] (fib 1 1))
-         ([a b]
-           (lazy-seq (cons a (fib b (+' a b))))))
+  ([] (fib 1 1))
+  ([a b]
+    (lazy-seq (cons a (fib b (+' a b))))))
 
-(defn add-fib [n]
+(defn fib-digits-sum [n]
   (reduce (fn [prev curr]
     (+ prev curr)) 0 (map #(Integer/parseInt %) (str/split (str n) #""))))
 
 (defn mod10 [n]
   (mod n 10))
 
-(defn get-fib-sum [fibs]
-  (reduce (fn [prev fib]
-    (+ prev (add-fib fib))) 0 fibs))
+(defn fibs-sum [fibs]
+  (reduce
+    (fn [prev fib]
+      (+ prev (fib-digits-sum fib))) 0 fibs))
 
 (defn solve [fib-count]
-  (let [fibs (drop 2 (take (+ fib-count 2) (fib)))]
-    (let [fib-sum (get-fib-sum fibs)]
-      (mod10 fib-sum))))
+  (mod10
+    (fibs-sum
+      (drop 2 (take (+ fib-count 2) (fib))))))
 
 (defn -main
   [& args]
