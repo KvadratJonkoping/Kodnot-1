@@ -1,5 +1,6 @@
 #!/usr/bin/perl
 use strict;
+use bignum;
 
 print "How many numbers in series?:\n";
 my $input = <STDIN>;
@@ -28,7 +29,6 @@ my $sum;
 foreach my $num (@f_array_3){
 	$sum += $num;
 }
-
 my $result = $sum%10;
 
 print "@f_array\n@f_array_2\n@f_array_3\n$sum\n\nThe result for $input is: $result";
